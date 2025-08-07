@@ -6,9 +6,9 @@ const projects = [
     title: "MemoStack",
     description:
       "Note-sharing app with login/signup, quick search, and note highlighting. Built with MERN stack and a clean responsive UI. Handled both frontend and backend integration.",
-    image: "/projects/memostack.png", // Replace with your actual image path
+    image: "src/assets/ConnectingDots.png", // Replace with your actual image path
     tags: ["MongoDB", "Express", "React.js", "Node.js"],
-    demoUrl: "#", // Add live demo link if available
+    demoUrl: "https://memostack.vercel.app/", // Add live demo link if available
     githubUrl: "https://github.com/ayush859/MemoStack",
   },
   {
@@ -16,10 +16,10 @@ const projects = [
     title: "ConnectingDots",
     description:
       "Real-time chat app using MERN stack and Socket.io. Features secure JWT login, smooth UX, and persistent chat history with responsive design.",
-    image: "/projects/connectingdots.png", // Replace with your actual image path
+    image: "src/assets/Memostack.png", // Replace with your actual image path
     tags: ["MongoDB", "Express", "React.js", "Node.js",  ],
-    demoUrl: "#", // Add live demo link if available
-    githubUrl: "https://github.com/ayush859/ConnectingDots",
+    demoUrl: "https://chat-app-prod-j44e.onrender.com/login", // Add live demo link if available
+    githubUrl: "https://github.com/ayush859/chat_app",
   },
  
 ];
@@ -94,7 +94,7 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/machadop1407"
+            href="https://github.com/ayush859/"
           >
             Check My Github <ArrowRight size={16} />
           </a>
