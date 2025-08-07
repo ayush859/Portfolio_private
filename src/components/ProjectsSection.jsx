@@ -1,4 +1,6 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import memostackImage from "../Project_img/Memostack.png";
+import connectingDotsImage from "../Project_img/ConnectingDots.png";
 
 const projects = [
   {
@@ -6,9 +8,9 @@ const projects = [
     title: "MemoStack",
     description:
       "Note-sharing app with login/signup, quick search, and note highlighting. Built with MERN stack and a clean responsive UI. Handled both frontend and backend integration.",
-    image: "src/assets/ConnectingDots.png", // Replace with your actual image path
+    image: memostackImage,
     tags: ["MongoDB", "Express", "React.js", "Node.js"],
-    demoUrl: "https://memostack.vercel.app/", // Add live demo link if available
+    demoUrl: "https://memostack.vercel.app/",
     githubUrl: "https://github.com/ayush859/MemoStack",
   },
   {
@@ -16,12 +18,13 @@ const projects = [
     title: "ConnectingDots",
     description:
       "Real-time chat app using MERN stack and Socket.io. Features secure JWT login, smooth UX, and persistent chat history with responsive design.",
-    image: "src/assets/Memostack.png", // Replace with your actual image path
-    tags: ["MongoDB", "Express", "React.js", "Node.js",  ],
-    demoUrl: "https://chat-app-prod-j44e.onrender.com/login", // Add live demo link if available
+    image: connectingDotsImage,
+    tags: ["MongoDB", "Express", "React.js", "Node.js"],
+    demoUrl: "https://chat-app-prod-j44e.onrender.com/login",
     githubUrl: "https://github.com/ayush859/chat_app",
+
   },
- 
+  
 ];
 
 export const ProjectsSection = () => {
@@ -29,7 +32,7 @@ export const ProjectsSection = () => {
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          {" "}
+
           Featured <span className="text-primary"> Projects </span>
         </h2>
 
@@ -39,9 +42,9 @@ export const ProjectsSection = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, key) => (
+          {projects.map((project) => (
             <div
-              key={key}
+              key={project.id}
               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
               <div className="h-48 overflow-hidden">
@@ -55,15 +58,16 @@ export const ProjectsSection = () => {
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                    <span
+                      key={tag}
+                      className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                    >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1">
-                  {project.title}
-                </h3>
+                <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
@@ -72,6 +76,7 @@ export const ProjectsSection = () => {
                     <a
                       href={project.demoUrl}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
                       <ExternalLink size={20} />
@@ -79,6 +84,7 @@ export const ProjectsSection = () => {
                     <a
                       href={project.githubUrl}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
                       <Github size={20} />
@@ -95,6 +101,7 @@ export const ProjectsSection = () => {
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
             href="https://github.com/ayush859/"
+            rel="noopener noreferrer"
           >
             Check My Github <ArrowRight size={16} />
           </a>
