@@ -1,14 +1,20 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
+
 const skills = [
+  // Core Skills
   { name: "JavaScript (ES6+)", level: 85, category: "core" },
   { name: "Node.js", level: 85, category: "core" },
   { name: "MongoDB", level: 75, category: "core" },
   { name: "C++", level: 80, category: "core" },
   { name: "Linux (System Programming)", level: 70, category: "core" },
   { name: "Data Structures & Algorithms", level: 75, category: "core" },
-];
+
+  // Backend & System Design
+  { name: "REST API Design", level: 75, category: "backend" },
+  { name: "Apache Kafka", level: 70, category: "backend" },
+]
 
 export const SkillsSection = () => {
   return (

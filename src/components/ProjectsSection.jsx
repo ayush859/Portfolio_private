@@ -24,7 +24,7 @@ const projects = [
     githubUrl: "https://github.com/ayush859/chat_app",
 
   },
-  
+
 ];
 
 export const ProjectsSection = () => {
@@ -95,17 +95,44 @@ export const ProjectsSection = () => {
             </div>
           ))}
         </div>
+ 
 
-        <div className="text-center mt-12">
-          <a
-            className="cosmic-button w-fit flex items-center mx-auto gap-2"
-            target="_blank"
-            href="https://github.com/ayush859/"
-            rel="noopener noreferrer"
-          >
-            Check My Github <ArrowRight size={16} />
-          </a>
-        </div>
+<div
+  className="flex justify-center items-center gap-4 mt-12"
+  style={{ flexWrap: "wrap" }}
+>
+  <a
+    className="cosmic-button flex items-center gap-2"
+    target="_blank"
+    href="https://github.com/ayush859/"
+    rel="noopener noreferrer"
+  >
+  Check My  GitHub <ArrowRight size={16} />
+  </a>
+
+  <a
+    className="cosmic-button flex items-center gap-2"
+    target="_blank"
+    href="https://www.linkedin.com/in/ayush859/"
+    rel="noopener noreferrer"
+  >
+    LinkedIn <ArrowRight size={16} />
+  </a>
+
+  <a
+    className="cosmic-button flex items-center gap-2"
+    target="_blank"
+    href="https://leetcode.com/ayush859/"
+    rel="noopener noreferrer"
+  >
+    LeetCode <ArrowRight size={16} />
+  </a>
+</div>
+
+         
+        
+
+
       </div>
     </section>
   );
